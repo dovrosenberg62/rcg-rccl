@@ -1,0 +1,24 @@
+[
+ {
+ "title": "Symphony of the Seas Deck Plans",
+ "info_code": "INFO-1",
+ "expires": "09/30/2017",
+ "description":"The brand new Oasis class ship, Symphony of the Seas, has 18 decks and a zillion rooms with balconies",
+ "group":"all",
+ },
+ {
+ "title": "Symphony of the Seas Top Speed",
+ "info_code": "INFO-2",
+ "expires": "09/30/2017",
+ "description":"The top speed of the Symphony of the Seas is over 30 knots. And NO you can't go tubing behind it!",
+ "group":"all",
+ },
+ {
+ "title": "Symphony of the Seas Neighborhoods",
+ "info_code": "INFO-3",
+ "expires": "09/30/2017",
+ "description":"The Symphony of the Seas has more neighborhoods than NYC and Los Angeles combined. And the food is better too!",
+ "group":"all",
+ },
+ 
+ ]
