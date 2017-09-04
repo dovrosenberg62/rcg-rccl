@@ -1,0 +1,18 @@
+[
+ {
+ "modelName": "prize",
+ "displayName": "Prize",
+ "particleScaleInfo": { }
+ },
+ {
+ "modelName": "clue",
+ "displayName": "Clue",
+ "particleScaleInfo": { }
+ },
+ {
+ "modelName": "info",
+ "displayName": "Info",
+ "particleScaleInfo": { }
+ },
+]
+ 
