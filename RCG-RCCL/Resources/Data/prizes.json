@@ -1,14 +1,5 @@
  [
   {
-  "name": "Free All Access Tour",
-  "coupon_code": "ALLACCESS",
-  "expires": "09/30/2017",
-  "redemption_type":"Sequential",
-  "prize_type":"Gift",
-  "captures":"10",
-  "group":"all",
-  },
-  {
   "name": "30 minutes on Flowrider",
   "coupon_code": "30MINFLOW",
   "expires": "09/30/2017",
@@ -16,6 +7,7 @@
   "prize_type":"Gift",
   "captures":"30",
   "group":"teen",
+  "description":"lorem ipso facto"
   },
   {
   "name": "Fast pass for Tidal Wave",
@@ -25,8 +17,8 @@
   "prize_type":"Gift",
   "captures":"30",
   "group":"teen",
-  },
-  {
+  "description":"lorem ipso facto"
+  },{
   "name": "30 minutes in Arcade",
   "coupon_code": "ARCADE",
   "expires": "09/30/2017",
@@ -34,6 +26,7 @@
   "prize_type":"Gift",
   "captures":"20",
   "group":"pre-teen",
+  "description":"lorem ipso facto"
   },
   {
   "name": "50% Discount on RipCord",
@@ -43,6 +36,7 @@
   "prize_type":"Percent Discount",
   "captures":"20",
   "group":"all",
+  "description":"lorem ipso facto"
   },
   {
   "name": "$25 Casino Credit",
@@ -52,6 +46,7 @@
   "prize_type":"Cash Prize",
   "captures":"20",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "$50 Casino Credit",
@@ -61,6 +56,7 @@
   "prize_type":"Cash Prize",
   "captures":"10",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "$100 Casino Credit",
@@ -70,6 +66,7 @@
   "prize_type":"Cash Prize",
   "captures":"3",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "Free Premium Mixed Drink",
@@ -79,6 +76,7 @@
   "prize_type":"Gift",
   "captures":"20",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "Free Bottle House Wine",
@@ -88,6 +86,7 @@
   "prize_type":"Gift",
   "captures":"20",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "15% off any excursion",
@@ -97,6 +96,7 @@
   "prize_type":"Percent Discount",
   "captures":"20",
   "group":"all",
+  "description":"lorem ipso facto"
   },
   {
   "name": "20% off any excursion",
@@ -106,6 +106,7 @@
   "prize_type":"Percent Discount",
   "captures":"20",
   "group":"all",
+  "description":"lorem ipso facto"
   },
   {
   "name": "30 minutes massage",
@@ -115,6 +116,7 @@
   "prize_type":"Gift",
   "captures":"20",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
   {
   "name": "Free manicure",
@@ -124,6 +126,66 @@
   "prize_type":"Gift",
   "captures":"20",
   "group":"adult",
+  "description":"lorem ipso facto"
   },
-]
-
+  {
+  "name": "Capture the flag",
+  "coupon_code": "CAPTUREFLAG-1",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "captures":"20",
+  "prize_type":"Clue",
+  "description":"Find the deck where the main dining room is and go to the port side of the ship",
+  "group":"all",
+  },
+  {
+  "name": "Capture the flag",
+  "coupon_code": "CAPTUREFLAG-2",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "prize_type":"Clue",
+  "captures":"20",
+  "description":"Find the deck where the kids pool is and go to the starboard side of the ship",
+  "group":"all",
+  },
+  {
+  "name": "Capture the flag",
+  "coupon_code": "CAPTUREFLAG-3",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "captures":"20",
+  "prize_type":"Clue",
+  "description":"Look for a picture of clowns",
+  "group":"all",
+  },
+  {
+  "name": "Symphony of the Seas Deck Plans",
+  "coupon_code": "INFO-1",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "captures":"20",
+  "prize_type":"Trivia",
+  "description":"The brand new Oasis class ship, Symphony of the Seas, has 18 decks and a zillion rooms with balconies",
+  "group":"all",
+  },
+  {
+  "name": "Symphony of the Seas Top Speed",
+  "coupon_code": "INFO-2",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "captures":"20",
+  "prize_type":"Trivia",
+  "description":"The top speed of the Symphony of the Seas is over 30 knots. And NO you can't go tubing behind it!",
+  "group":"all",
+  },
+  {
+  "name": "Symphony of the Seas Neighborhoods",
+  "coupon_code": "INFO-3",
+  "expires": "09/30/2017",
+  "redemption_type":"Sequential",
+  "captures":"20",
+  "prize_type":"Trivia",
+  "description":"The Symphony of the Seas has more neighborhoods than NYC and Los Angeles combined. And the food is better too!",
+  "group":"all",
+  },
+  ]

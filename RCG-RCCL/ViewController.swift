@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     
     var dragOnInfinitePlanesEnabled = false
     var virtualObjectManager: VirtualObjectManager!
-    var dataAccessManager: DataAccessManager!
     
     var isLoadingObject: Bool = false {
         didSet {
@@ -66,7 +65,6 @@ class ViewController: UIViewController {
         Setting.registerDefaults()
 		setupUIControls()
         setupScene()
-        loadData()
         startTimer()
 
     }
@@ -114,14 +112,6 @@ class ViewController: UIViewController {
 			self.screenCenter = self.sceneView.bounds.mid
 		}
 	}
-    
-    func loadData() {
-        // load the JSON files for the demo
-        // Synchronize updates via the `serialQueue`.
-        dataAccessManager = DataAccessManager(updateQueue: serialQueue)
-       // DataAccessManager.availablePrizes
-        
-    }
     
     func setupUIControls() {
         textManager = TextManager(viewController: self)

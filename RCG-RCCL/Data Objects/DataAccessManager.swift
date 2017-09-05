@@ -10,13 +10,7 @@ import Foundation
 import ARKit
 
 class DataAccessManager {
-    //weak var delegate: DataAccessManagerDelegate?
     
-    var availablePrizes = [Prize]()
-    var availableInfo = [Info]()
-    var availableClues = [Clue]()
-    
-
     /// The queue with updates to the virtual objects are made on.
     var updateQueue: DispatchQueue
     
@@ -24,19 +18,18 @@ class DataAccessManager {
         self.updateQueue = updateQueue
     }
     
-    static let availablePrizes: [Prize] = {
+    static let availablePrizes: [PrizeDefinition] = {
         guard let jsonURL = Bundle.main.url(forResource: "prizes", withExtension: "json") else {
             fatalError("Missing 'prizes.json' in bundle.")
         }
         
         do {
             let jsonData = try Data(contentsOf: jsonURL)
-            let prizes = try JSONDecoder().decode([Prize].self, from: jsonData)
-            //print ("\(prizes[].name) \(prizes[].couponCode) ")
-            return prizes
+            return try JSONDecoder().decode([PrizeDefinition].self, from: jsonData)
         } catch {
             fatalError("Unable to decode Prize Objects JSON: \(error)")
         }
+        
     }()
     
 }

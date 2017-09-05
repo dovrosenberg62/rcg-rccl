@@ -16,6 +16,8 @@ class VirtualObjectManager {
     
 	var lastUsedObject: VirtualObject?
     
+    var dataAccessManager: DataAccessManager!
+    
     /// The queue with updates to the virtual objects are made on.
     var updateQueue: DispatchQueue
     
@@ -37,7 +39,21 @@ class VirtualObjectManager {
             fatalError("Unable to decode VirtualObjects JSON: \(error)")
         }
     }()
-
+    
+    static let availablePrizes: [PrizeDefinition] = {
+        guard let jsonURL = Bundle.main.url(forResource: "prizes", withExtension: "json") else {
+            fatalError("Missing 'prizes.json' in bundle.")
+        }
+        
+        do {
+            let jsonData = try Data(contentsOf: jsonURL)
+            return try JSONDecoder().decode([PrizeDefinition].self, from: jsonData)
+        } catch {
+            fatalError("Unable to decode Prize Objects JSON: \(error)")
+        }
+        
+    }()
+    
 	func removeAllVirtualObjects() {
 		for object in virtualObjects {
 			unloadVirtualObject(object)
