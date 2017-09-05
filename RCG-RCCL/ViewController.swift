@@ -145,7 +145,7 @@ class ViewController: UIViewController {
             // Perform hit-test against all objects in the scene
             if let hit = sceneView.hitTest(touchLocation, options: nil).first {
                 
-                // Remove the node
+                // Remove the node from view
                 hit.node.removeFromParentNode()
             }
         }
