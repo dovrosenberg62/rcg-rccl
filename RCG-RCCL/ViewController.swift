@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         Setting.registerDefaults()
 		setupUIControls()
         setupScene()
+        startTimer()
     }
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -137,7 +138,41 @@ class ViewController: UIViewController {
 			return
 		}
 		virtualObjectManager.reactToTouchesEnded(touches, with: event)
+        
+        // Get the first touch location on screen
+        if let touchLocation = touches.first?.location(in: sceneView) {
+            
+            // Perform hit-test against all objects in the scene
+            if let hit = sceneView.hitTest(touchLocation, options: nil).first {
+                
+                // Remove the node
+                hit.node.removeFromParentNode()
+            }
+        }
 	}
+    
+     func startTimer() {
+        _ = Timer.scheduledTimer(timeInterval: 30, target: self, selector: (#selector (testTimer)), userInfo: nil, repeats: true);
+    }
+    
+    //Using this Alert to test the timer
+    @objc func testTimer() {
+        let alertController = UIAlertController(title: "Testing Testing", message: "Timer works!", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction!) in
+            print("you have pressed the No button");
+            //Call another alert here
+        }
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+            print("you have pressed Yes button");
+            //Call another alert here
+        }
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true, completion:nil)
+    }
 	
 	override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
 		virtualObjectManager.reactToTouchesCancelled(touches, with: event)
