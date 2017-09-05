@@ -6,30 +6,44 @@
 //  Copyright © 2017 Apple. All rights reserved.
 //
 
+/*
+ "prize": [
+ {
+ "name": "30 minutes on Flowrider",
+ "coupon_code": "30MINFLOW",
+ "expires": "09/30/2017",
+ "redemption_type":"Sequential",
+ "prize_type":"Gift",
+ "captures":"30",
+ "group":"teen",
+ },
+ ]
+ */
+
 import Foundation
 
-struct PrizesList : Codable {
+/*struct PrizesList : Codable {
     let prizes: [Prize]
 }
-
-class Prize: Codable{
+*/
+class PrizeTmp: Codable{
     
     let name: String
-    let couponCode: String
-    let expires: Date
-    let prizeType: String
-    let captures: Int
+    let coupon_code: String
+    let expires: String
+    let prize_type: String
+    let captures: String
     let group: String
-    let redemptionType: String
+    let redemption_type: String
     
     
-    init(name: String, couponCode: String, expires: Date, prizeType: String, captures: Int, group: String, redemptionType: String) {
+    init(name: String, coupon_code: String, expires: String, prize_type: String, captures: String, group: String, redemption_type: String) {
         self.name = name
-        self.couponCode = couponCode
+        self.coupon_code = coupon_code
         self.expires = expires
-        self.prizeType = prizeType
+        self.prize_type = prize_type
         self.captures = captures
         self.group = group
-        self.redemptionType = redemptionType
+        self.redemption_type = redemption_type
     }
 }
