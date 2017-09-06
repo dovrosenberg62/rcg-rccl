@@ -34,4 +34,15 @@ struct PrizeDefinition: Codable{
     let group: String
     let redemption_type: String
     let description: String
+    
+    init(name: String, coupon_code: String, expires: String, prize_type: String, captures: String, group: String, redemption_type: String, description: String) {
+        self.captures = captures
+        self.coupon_code = coupon_code
+        self.expires = expires
+        self.description = description
+        self.group = group
+        self.name = name
+        self.prize_type = prize_type
+        self.redemption_type = redemption_type
+    }
 }

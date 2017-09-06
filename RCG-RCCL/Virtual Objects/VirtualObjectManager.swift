@@ -54,6 +54,17 @@ class VirtualObjectManager {
         
     }()
     
+    func getRandomPrize() -> PrizeDefinition{
+        let numPrizes = UInt32(DataAccessManager.availablePrizes.count - 1)
+        let lower : UInt32 = 0
+        //let upper : UInt32 = (numPrizes - 1)
+        let randomNumber = Int(arc4random_uniform(numPrizes - lower) + lower)
+        let aPrize = DataAccessManager.availablePrizes[randomNumber]
+        print(aPrize)
+        return aPrize
+        
+    }
+    
 	func removeAllVirtualObjects() {
 		for object in virtualObjects {
 			unloadVirtualObject(object)
@@ -101,6 +112,7 @@ class VirtualObjectManager {
                 self.lastUsedObject = object
                 
                 self.delegate?.virtualObjectManager(self, didLoad: object)
+                object.prize = self.getRandomPrize()
             }
         }
 	}

@@ -32,8 +32,11 @@ struct VirtualObjectDefinition: Codable, Equatable {
 class VirtualObject: SCNReferenceNode, ReactsToScale {
     let definition: VirtualObjectDefinition
     
+    var prize: PrizeDefinition?
+    
     init(definition: VirtualObjectDefinition) {
         self.definition = definition
+        self.prize = nil
         guard let url = Bundle.main.url(forResource: "Models.scnassets/\(definition.modelName)/\(definition.modelName)", withExtension: "scn")
             else { fatalError("can't find expected virtual object bundle resources") }
         super.init(url: url)!
