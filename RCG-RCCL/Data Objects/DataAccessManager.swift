@@ -18,6 +18,9 @@ class DataAccessManager {
         self.updateQueue = updateQueue
     }
     
+    // this holds the list of things that the user has collected on their journey
+    var collectedPrizes = [PrizeDefinition]()
+    
     static let availablePrizes: [PrizeDefinition] = {
         guard let jsonURL = Bundle.main.url(forResource: "prizes", withExtension: "json") else {
             fatalError("Missing 'prizes.json' in bundle.")

@@ -137,6 +137,10 @@ class VirtualObjectManager {
 				lastUsedObject = newObject
 			}
 		}
+        // add the PrizeDefinition associated with the object to the list of collected prizes
+        
+        //dataAccessManager.collectedPrizes.append((lastUsedObject?.prize)!)
+        //print(dataAccessManager.collectedPrizes)
 	}
 	
 	func reactToTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -306,7 +310,7 @@ class VirtualObjectManager {
 	                                     objectPos: float3?,
 	                                     infinitePlane: Bool = false) -> (position: float3?, planeAnchor: ARPlaneAnchor?, hitAPlane: Bool) {
 		
-		let dragOnInfinitePlanesEnabled = UserDefaults.standard.bool(for: .dragOnInfinitePlanes)
+		let dragOnInfinitePlanesEnabled = true //UserDefaults.standard.bool(for: .dragOnInfinitePlanes)
 		
 		// -------------------------------------------------------------------------------
 		// 1. Always do a hit test against exisiting plane anchors first.

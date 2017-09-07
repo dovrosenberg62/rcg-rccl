@@ -26,14 +26,14 @@ import Foundation
 
 
 struct PrizeDefinition: Codable{
-    let name: String
-    let coupon_code: String
-    let expires: String
-    let prize_type: String
-    let captures: String
-    let group: String
-    let redemption_type: String
-    let description: String
+    let name: String?
+    let coupon_code: String?
+    let expires: String?
+    let prize_type: String?
+    let captures: String?
+    let group: String?
+    let redemption_type: String?
+    let description: String?
     
     init(name: String, coupon_code: String, expires: String, prize_type: String, captures: String, group: String, redemption_type: String, description: String) {
         self.captures = captures

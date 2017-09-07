@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     var isLoadingObject: Bool = false {
         didSet {
             DispatchQueue.main.async {
-                self.settingsButton.isEnabled = !self.isLoadingObject
                 self.addObjectButton.isEnabled = !self.isLoadingObject
                 self.restartExperienceButton.isEnabled = !self.isLoadingObject
             }
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var addObjectButton: UIButton!
     @IBOutlet weak var restartExperienceButton: UIButton!
     
@@ -62,7 +60,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Setting.registerDefaults()
+       // Setting.registerDefaults()
 		setupUIControls()
         setupScene()
         startTimer()
@@ -148,6 +146,12 @@ class ViewController: UIViewController {
                 
                 // Remove the node from view
                 hit.node.removeFromParentNode()
+                // add the captured prize to the list
+                let prize = virtualObjectManager.lastUsedObject?.prize
+                virtualObjectManager.dataAccessManager.collectedPrizes.append(prize)
+                
+                print(virtualObjectManager.dataAccessManager.collectedPrizes)
+                
             }
         }
 	}
