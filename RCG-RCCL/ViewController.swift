@@ -148,10 +148,9 @@ class ViewController: UIViewController {
                 hit.node.removeFromParentNode()
                 // add the captured prize to the list
                 let prize = virtualObjectManager.lastUsedObject?.prize
-                virtualObjectManager.dataAccessManager.collectedPrizes.append(prize)
-                
-                print(virtualObjectManager.dataAccessManager.collectedPrizes)
-                
+              
+                virtualObjectManager.dataAccessManager.collectedPrizes.append(prize!)
+               
             }
         }
 	}

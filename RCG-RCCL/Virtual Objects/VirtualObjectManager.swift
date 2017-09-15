@@ -23,6 +23,7 @@ class VirtualObjectManager {
     
     init(updateQueue: DispatchQueue) {
         self.updateQueue = updateQueue
+        dataAccessManager = DataAccessManager(updateQueue: self.updateQueue)
     }
 	
 	// MARK: - Resetting objects
