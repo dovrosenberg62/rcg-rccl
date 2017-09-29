@@ -13,6 +13,7 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
     enum SegueIdentifier: String {
         case showSettings
         case showObjects
+        case showPrizes
     }
     
     // MARK: - Interface Actions
@@ -25,6 +26,13 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
         performSegue(withIdentifier: SegueIdentifier.showObjects.rawValue, sender: button)
     }
     
+    @IBAction func showPrizes(_ button: UIButton) {
+        // Abort if we are about to load another object to avoid concurrent modifications of the scene.
+        if isLoadingObject { return }
+        
+        textManager.cancelScheduledMessage(forType: .contentPlacement)
+        performSegue(withIdentifier: SegueIdentifier.showPrizes.rawValue, sender: button)
+    }
     /// - Tag: restartExperience
     @IBAction func restartExperience(_ sender: Any) {
         guard restartExperienceButtonIsEnabled, !isLoadingObject else { return }
@@ -77,13 +85,11 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             objectsViewController.delegate = self
         }
         
-        print("segue identifier:", segue.identifier)
-        
-        if segue.identifier == Optional("showPrizes") {
-          //  let prizesViewController = segue.destination as? PrizesTableViewController
-            print("PrizeList segue")
-          //  prizesViewController?.prizes = virtualObjectManager.dataAccessManager.collectedPrizes
+        if segueIdentifer == .showPrizes, let objectsViewController = segue.destination as? PrizesTableViewController {
+            print("in prize list")
+            objectsViewController.prizes = virtualObjectManager.dataAccessManager.collectedPrizes
         }
+        
  
     }
     

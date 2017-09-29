@@ -101,8 +101,8 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpr-xp-uCr">
-                                <rect key="frame" x="337" y="610" width="22" height="22"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpr-xp-uCr">
+                                <rect key="frame" x="349" y="617" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="XCc-X5-vbL" kind="popoverPresentation" identifier="showPrizes" popoverAnchorView="Jpr-xp-uCr" id="FII-3S-0Fp">
@@ -208,20 +208,20 @@
             </objects>
             <point key="canvasLocation" x="746" y="274"/>
         </scene>
-        <!--Prizes Table View Controller-->
+        <!--Collected Prizes-->
         <scene sceneID="x4O-sA-VPP">
             <objects>
-                <tableViewController id="XCc-X5-vbL" customClass="PrizesTableViewController" customModule="RCG_RCCL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Collected Prizes" id="XCc-X5-vbL" customClass="PrizesTableViewController" customModule="RCG_RCCL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YfB-FC-1J2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g15-Y9-Kwh">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="250" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g15-Y9-Kwh" id="EmI-pt-Tcm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -231,6 +231,7 @@
                             <outlet property="delegate" destination="XCc-X5-vbL" id="F3h-eB-EpJ"/>
                         </connections>
                     </tableView>
+                    <size key="freeformSize" width="250" height="400"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urk-NL-1bX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -100,7 +100,7 @@ class ViewController: UIViewController {
 		sceneView.setup()
 		sceneView.delegate = self
 		sceneView.session = session
-		// sceneView.showsStatistics = true
+        sceneView.showsStatistics = true
 		
 		sceneView.scene.enableEnvironmentMapWithIntensity(25, queue: serialQueue)
 		
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
               
                 virtualObjectManager.dataAccessManager.collectedPrizes.append(prize!)
                 print("touches ended")
-                print(virtualObjectManager.dataAccessManager.collectedPrizes)
+               // print(virtualObjectManager.dataAccessManager.collectedPrizes)
             }
         }
 	}

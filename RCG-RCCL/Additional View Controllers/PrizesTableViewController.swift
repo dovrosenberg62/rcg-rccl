@@ -23,7 +23,6 @@ class PrizesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(prizes)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
