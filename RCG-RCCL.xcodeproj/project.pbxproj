@@ -24,6 +24,7 @@
 		3987BEDC1E9E057F00167FAC /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3987BEDB1E9E057F00167FAC /* Gesture.swift */; };
 		39C0B95A1E9C6B1F003FCA0C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C0B9581E9C6B1F003FCA0C /* Utilities.swift */; };
 		39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */; };
+		9666DD6D1F7C8820006BBB0B /* PrizesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666DD6C1F7C8820006BBB0B /* PrizesTableViewController.swift */; };
 		96B53D181F5D0A5600416700 /* prizes.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B53D171F5D0A5600416700 /* prizes.json */; };
 		96B53D1F1F5D8AB000416700 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B53D1E1F5D8AB000416700 /* Prize.swift */; };
 		96B53D231F5DCB1B00416700 /* DataAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B53D221F5DCB1B00416700 /* DataAccessManager.swift */; };
@@ -58,6 +59,7 @@
 		39C0B9581E9C6B1F003FCA0C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2F880B9F1F567D5404F826 /* SampleCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		9666DD6C1F7C8820006BBB0B /* PrizesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizesTableViewController.swift; sourceTree = "<group>"; };
 		96B53D171F5D0A5600416700 /* prizes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prizes.json; sourceTree = "<group>"; };
 		96B53D1E1F5D8AB000416700 /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		96B53D221F5DCB1B00416700 /* DataAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessManager.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		1488324B1EFC3EBF0043E0AB /* Additional View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9666DD6C1F7C8820006BBB0B /* PrizesTableViewController.swift */,
 				147062631F06FA790003EE03 /* VirtualObjectSelectionViewController.swift */,
 			);
 			path = "Additional View Controllers";
@@ -304,6 +307,7 @@
 				C41366B91EB80DD400EC054A /* TextManager.swift in Sources */,
 				39C0B95A1E9C6B1F003FCA0C /* Utilities.swift in Sources */,
 				147062641F06FA790003EE03 /* VirtualObjectSelectionViewController.swift in Sources */,
+				9666DD6D1F7C8820006BBB0B /* PrizesTableViewController.swift in Sources */,
 				392BB82C1EA19A7C00FBBAC8 /* Plane.swift in Sources */,
 				148832451EFC3C160043E0AB /* TwoFingerGesture.swift in Sources */,
 				3987BEDC1E9E057F00167FAC /* Gesture.swift in Sources */,
