@@ -140,7 +140,7 @@ class VirtualObjectManager {
 		}
         // add the PrizeDefinition associated with the object to the list of collected prizes
         
-        //dataAccessManager.collectedPrizes.append((lastUsedObject?.prize)!)
+        dataAccessManager.collectedPrizes.append((lastUsedObject?.prize)!)
         //print(dataAccessManager.collectedPrizes)
 	}
 	

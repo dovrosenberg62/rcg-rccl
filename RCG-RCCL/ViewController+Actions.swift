@@ -71,10 +71,20 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             popoverController.sourceRect = button.bounds
         }
         
+        
         guard let identifier = segue.identifier, let segueIdentifer = SegueIdentifier(rawValue: identifier) else { return }
         if segueIdentifer == .showObjects, let objectsViewController = segue.destination as? VirtualObjectSelectionViewController {
             objectsViewController.delegate = self
         }
+        
+        print("segue identifier:", segue.identifier)
+        
+        if segue.identifier == Optional("showPrizes") {
+          //  let prizesViewController = segue.destination as? PrizesTableViewController
+            print("PrizeList segue")
+          //  prizesViewController?.prizes = virtualObjectManager.dataAccessManager.collectedPrizes
+        }
+ 
     }
     
 }

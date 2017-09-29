@@ -150,7 +150,8 @@ class ViewController: UIViewController {
                 let prize = virtualObjectManager.lastUsedObject?.prize
               
                 virtualObjectManager.dataAccessManager.collectedPrizes.append(prize!)
-               
+                print("touches ended")
+                print(virtualObjectManager.dataAccessManager.collectedPrizes)
             }
         }
 	}
@@ -282,4 +283,5 @@ class ViewController: UIViewController {
 		}
 	}
     
+
 }
